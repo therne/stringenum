@@ -41,5 +41,15 @@ Then, run go generate to generate stub codes:
  $ go generate ./...
 ```
 
+## Generated Values and Methods
+
+
+ * `<Type>Values`: A list of all available values in the enum.
+ * `<Type>FromString(string)`: Casts string into the enum. An error is returned if given string is not defined on the enum.
+ * `IsValid()`: Returns false if the value is not defined on the enum.
+ * `Validate()`: Returns an error if the value is not defined on the enum.
+ * `MarshalText` / `UnmarshalText`: Implements `encoding.TextMarshaler` / `TextUnmarshaler` interface for JSON / YAML serialization.
+ * `String() `: Casts the enum into a `string`. Implements `fmt.Stringer` interface.
+
 
 ## License: MIT
