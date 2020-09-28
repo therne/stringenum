@@ -9,8 +9,7 @@ A go tool to auto-generate serialization / validation methods for enum types ali
  * Implements `Validator` interface
  * **Does not support default values yet.** But it has good fit with 
  third-party default value modules like [creasty/defaults](https://github.com/creasty/defaults)
- because it's basically a string.
- 
+ because your types are basically a string!
  
  
 ## Installation
