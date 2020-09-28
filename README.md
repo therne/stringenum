@@ -16,7 +16,7 @@ Generates enum codes for types aliased `string`.
 You need to install `stringenum` to generate enum stub codes.
 
 ```
- $ go get github.com/
+ $ go get github.com/therne/stringenum/...
 ```
 
 ## Usage
