@@ -23,8 +23,8 @@ You need to install `stringenum` to generate enum stub codes.
 
 On the top of your type definition sources, add `go generate` clause to generate stub codes with `stringenum`.
 
-```go
-// go:generate stringenum Kind
+```diff
++ //go:generate stringenum Kind
 package mytype
 
 type Kind string
