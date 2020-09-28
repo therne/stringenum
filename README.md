@@ -1,11 +1,13 @@
 stringenum
 =========
 
-Generates enum codes for types aliased `string`.
+A go tool to auto-generate serialization / validation methods for enum types aliasing `string`.
+
+#### Features
 
  * Supports JSON, YAML serialization
  * Implements `Validator` interface
- * Does not support default values yet, but it has good fit with 
+ * **Does not support default values yet.** But it has good fit with 
  third-party default value modules like [creasty/defaults](https://github.com/creasty/defaults)
  because it's basically a string.
  
