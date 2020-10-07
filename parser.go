@@ -23,6 +23,13 @@ type EnumDesc struct {
 	Values map[string]string
 }
 
+func (e EnumDesc) EnumValues() (vv []string) {
+	for _, v := range e.Values {
+		vv = append(vv, v)
+	}
+	return vv
+}
+
 func Parse(srcDir string, opt ParsingOptions) (parsedFiles map[string]ParsedFile, err error) {
 	parsedFiles = make(map[string]ParsedFile)
 

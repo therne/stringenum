@@ -6,9 +6,14 @@ import (
 	"text/template"
 )
 
+var templateFunctions = template.FuncMap{
+	"StringJoin": strings.Join,
+}
+
 func defineTemplate(code string) *template.Template {
 	code = strings.TrimLeft(code, "\n ")
-	tmpl, err := template.New("").Parse(code)
+
+	tmpl, err := template.New("").Funcs(templateFunctions).Parse(code)
 	if err != nil {
 		panic(err)
 	}
